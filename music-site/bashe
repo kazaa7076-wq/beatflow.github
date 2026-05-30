@@ -1,0 +1,8 @@
+music-site/
+├─ index.html
+├─ style.css
+├─ script.js
+└─ music/
+   ├─ song1.mp3
+   ├─ song2.mp3
+   └─ song3.mp3

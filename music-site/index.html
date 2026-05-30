@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پلیر موزیک amir</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <i class="fa-brands fa-spotify"></i>
+        <h1>Ultra Music</h1>
+      </div>
+
+      <p class="subtitle">پلی‌لیست</p>
+
+      <ul id="song-list" class="playlist">
+        <li class="active" data-index="0">
+          <img src="covers/cover1.jpg" alt="cover">
+          <div class="song-meta">
+            <span>Still D.R.E.</span>
+            <small>Dr. Dre ft. Snoop Dogg</small>
+          </div>
+        </li>
+        <li data-index="1">
+          <img src="covers/cover2.jpg" alt="cover">
+          <div class="song-meta">
+            <span>Bohemian Rhapsody</span>
+            <small>Queen</small>
+          </div>
+        </li>
+        <li data-index="2">
+          <img src="covers/cover3.jpg" alt="cover">
+          <div class="song-meta">
+            <span>Billie Jean</span>
+            <small>Michael Jackson</small>
+          </div>
+        </li>
+        <li data-index="3">
+          <img src="covers/cover4.jpg" alt="cover">
+          <div class="song-meta">
+            <span>Smells Like Teen Spirit</span>
+            <small>Nirvana</small>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="player">
+      <div class="now-playing">
+        <div class="cover-container">
+          <img id="cover" src="covers/cover1.jpg" alt="cover">
+        </div>
+        <div class="track-info">
+          <h2 id="song-title">Still D.R.E.</h2>
+          <p id="artist">Dr. Dre ft. Snoop Dogg</p>
+        </div>
+      </div>
+
+      <div class="timer-row">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <div class="controls">
+        <button id="shuffle" class="icon-btn" title="Shuffle">
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+
+        <button id="prev" class="icon-btn big" title="Previous">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+
+        <button id="play" class="play-btn" title="Play/Pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <button id="next" class="icon-btn big" title="Next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+
+        <button id="repeat" class="icon-btn" title="Repeat">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+
+      <div class="volume-row">
+        <i class="fa-solid fa-volume-high"></i>
+        <input id="volume" type="range" min="0" max="100" value="80">
+      </div>
+
+      <audio id="audio"></audio>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
